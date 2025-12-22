@@ -1,0 +1,35 @@
+add time shift column 
+Time of Day = 
+SWITCH(TRUE(),
+    HOUR('Instagram_Analytics'[post Time]) < 12, "Morning",
+    HOUR('Instagram_Analytics'[post Time]) < 17, "Afternoon",
+    HOUR('Instagram_Analytics'[post Time]) < 21, "Evening",
+    "Night"
+)
+
+caption catageory
+Caption Category = 
+SWITCH(TRUE(),
+    'Instagram Analytics'[caption_length] < 50, "Short (<50)",
+    'Instagram Analytics'[caption_length] <= 150, "Medium (50-150)",
+    "Long (>150)"
+)
+
+engg rate 
+Is Viral = IF('Instagram Analytics'[engagement_rate] > 10, "Viral", "Normal")
+
+dax measure 
+	a. Total Interactions: (Sum of all actions)
+Total Interactions = SUM('Instagram Analytics'[likes]) + SUM('Instagram Analytics'[comments]) + SUM('Instagram Analytics'[shares]) + SUM('Instagram Analytics'[saves])
+
+	b. Avg. Reach per Post:
+Avg Reach = AVERAGE('Instagram Analytics'[reach])
+
+	c. Real Engagement Rate (Impressions based)
+Global Engagement Rate = DIVIDE([Total Interactions], SUM('Instagram Analytics'[impressions]), 0)
+
+	d. Saves-to-Like Ratio: (Indicates highly valuable content that users want to keep) 
+Saves to Likes Ratio = DIVIDE(SUM('Instagram Analytics'[saves]), SUM('Instagram Analytics'[likes]), 0)
+
+	e. Follower Conversion Rate: (How many people followed after seeing the post)
+Follower Conv % = DIVIDE(SUM('Instagram Analytics'[followers_gained]), SUM('Instagram Analytics'[reach]), 0)

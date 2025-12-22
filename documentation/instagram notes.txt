@@ -1,0 +1,22 @@
+1. Download data from Kaggle 
+2. extract all data
+3. get data from csv file in PowerBI 
+4. transform 
+  	a. split upload date column -> date, time (home tab -> split column)
+	b. delete time column
+	c. create new column index 
+	d. get data -> select blank query -> advance option -> create index and 		random time columns
+	e. merge both table from index column 
+	f. expand table -> select time column 
+	g. delete index column  from main table
+	h. close and apply data
+5. added day column from date column 
+6. added time shift column from post time column
+7. captions category accord to length
+9. engage rate added column
+10. DAX measure 
+	a. Total Interactions: (Sum of all actions)
+	b. Avg. Reach per Post
+	c. Real Engagement Rate (Impressions based)
+	d. Saves-to-Like Ratio: (Indicates highly valuable content that users want to keep)
+	e. follower Conversion Rate: (How many people followed after seeing the post)
