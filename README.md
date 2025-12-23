@@ -330,8 +330,8 @@ DIVIDE(SUM('Instagram Analytics'[followers_gained]), SUM('Instagram Analytics'[r
 For any questions or feedback regarding this project, please feel free to reach out!
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/lileshwar-mahajan)
-- LinkedIn: [Your LinkedIn Profile](www.linkedin.com/in/lileshwar-mahajan-b81137255)
+- GitHub: [@lileshwar_mahajan](https://github.com/lileshwar-mahajan)
+- LinkedIn: [Lileshwae Mahajan](www.linkedin.com/in/lileshwar-mahajan-b81137255)
 - Email: mahajanlileshwar@gmail.com
 
 ## ⭐ Acknowledgments
